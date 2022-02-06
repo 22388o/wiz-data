@@ -15,6 +15,8 @@ export class WizData {
   number?: number;
   text?: string;
 
+  label?: string;
+
   private constructor(hex?: string, bin?: string, number?: number, text?: string, bytes?: Uint8Array) {
     let inputVal: string | number | Uint8Array = "";
     let bytesVal: Uint8Array = new Uint8Array([]);
