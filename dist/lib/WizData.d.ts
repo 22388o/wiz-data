@@ -5,6 +5,7 @@ export declare class WizData {
     hex: string;
     number?: number;
     text?: string;
+    label?: string;
     private constructor();
     static fromHex(hex: string): WizData;
     static fromBin(bin: string): WizData;
