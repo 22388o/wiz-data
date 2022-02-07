@@ -1,22 +1,9 @@
 {
   "name": "@script-wiz/wiz-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Magic Wiz Data",
   "scripts": {
     "npm-pubish": "npm publish --access public"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-typescript": "^7.13.0",
-    "@types/jest": "^26.0.23",
-    "babel-loader": "^8.0.6",
-    "jest": "^26.6.3",
-    "ts-loader": "^8.0.18",
-    "typescript": "^4.3.5",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.12"
   },
   "repository": {
     "type": "git",
