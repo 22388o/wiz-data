@@ -17,7 +17,9 @@ export class WizData {
 
   label?: string;
 
-  private constructor(hex?: string, bin?: string, number?: number, text?: string, bytes?: Uint8Array) {
+  isWitnessElement?: boolean;
+
+  private constructor(hex?: string, bin?: string, number?: number, text?: string, bytes?: Uint8Array, isWitnessElement: boolean = true) {
     let inputVal: string | number | Uint8Array = "";
     let bytesVal: Uint8Array = new Uint8Array([]);
     let binVal: string = "";
@@ -25,6 +27,8 @@ export class WizData {
 
     let numberVal: number | undefined = undefined;
     let textVal: string | undefined = undefined;
+
+    this.isWitnessElement = isWitnessElement;
 
     // fromHex
     if (hex !== undefined) {
@@ -85,23 +89,23 @@ export class WizData {
     this.text = textVal;
   }
 
-  public static fromHex(hex: string): WizData {
-    return new WizData(hex, undefined, undefined, undefined);
+  public static fromHex(hex: string, isWitnessElement?: boolean): WizData {
+    return new WizData(hex, undefined, undefined, undefined, undefined, isWitnessElement);
   }
 
-  public static fromBin(bin: string): WizData {
-    return new WizData(undefined, bin, undefined, undefined);
+  public static fromBin(bin: string, isWitnessElement?: boolean): WizData {
+    return new WizData(undefined, bin, undefined, undefined, undefined, isWitnessElement);
   }
 
-  public static fromNumber(number: number): WizData {
-    return new WizData(undefined, undefined, number, undefined);
+  public static fromNumber(number: number, isWitnessElement?: boolean): WizData {
+    return new WizData(undefined, undefined, number, undefined, undefined, isWitnessElement);
   }
 
-  public static fromText(text: string): WizData {
-    return new WizData(undefined, undefined, undefined, text);
+  public static fromText(text: string, isWitnessElement?: boolean): WizData {
+    return new WizData(undefined, undefined, undefined, text, undefined, isWitnessElement);
   }
 
-  public static fromBytes(bytes: Uint8Array): WizData {
-    return new WizData(undefined, undefined, undefined, undefined, bytes);
+  public static fromBytes(bytes: Uint8Array, isWitnessElement?: boolean): WizData {
+    return new WizData(undefined, undefined, undefined, undefined, bytes, isWitnessElement);
   }
 }
