@@ -6,10 +6,11 @@ export declare class WizData {
     number?: number;
     text?: string;
     label?: string;
+    isWitnessElement?: boolean;
     private constructor();
-    static fromHex(hex: string): WizData;
-    static fromBin(bin: string): WizData;
-    static fromNumber(number: number): WizData;
-    static fromText(text: string): WizData;
-    static fromBytes(bytes: Uint8Array): WizData;
+    static fromHex(hex: string, isWitnessElement?: boolean): WizData;
+    static fromBin(bin: string, isWitnessElement?: boolean): WizData;
+    static fromNumber(number: number, isWitnessElement?: boolean): WizData;
+    static fromText(text: string, isWitnessElement?: boolean): WizData;
+    static fromBytes(bytes: Uint8Array, isWitnessElement?: boolean): WizData;
 }
