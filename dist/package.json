@@ -1,6 +1,6 @@
 {
   "name": "@script-wiz/wiz-data",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Magic Wiz Data",
   "scripts": {
     "npm-pubish": "npm publish --access public"
